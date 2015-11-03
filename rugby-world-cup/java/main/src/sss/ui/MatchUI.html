@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8" name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:true,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GRID_TYPE&quot;:&quot;RegularGrid,20&quot;,&quot;PAPER_WIDTH&quot;:1440,&quot;PAPER_HEIGHT&quot;:900,&quot;PAPER_SCROLL_LEFT&quot;:1848,&quot;PAPER_SCROLL_TOP&quot;:2084,&quot;JAVA_SOURCES_ROOT&quot;:&quot;java/main/src&quot;,&quot;THEME&quot;:&quot;rugby-world-cup&quot;}">
+ </head> 
+ <body> 
+  <vaadin-vertical-layout _id="root"> 
+   <vaadin-vertical-layout height="100px" _id="teamsLayout" :middle=""> 
+    <vaadin-horizontal-layout width-full="true" height="35px" :middle=""> 
+     <vaadin-horizontal-layout width="40%" _id="homeTeamLayout" :middle="" :right=""> 
+      <vaadin-label style-name="bolderBigger" width="120px" plain-text="" _id="homeTeamLabel" :middle="" :center="">
+        Home Team 
+      </vaadin-label> 
+     </vaadin-horizontal-layout> 
+     <vaadin-horizontal-layout width="10%" _id="homeTeamYellow" :right=""></vaadin-horizontal-layout> 
+     <vaadin-horizontal-layout width="10%" _id="awayTeamYellow"></vaadin-horizontal-layout> 
+     <vaadin-horizontal-layout width="40%" _id="awayTeamLayout" :middle=""> 
+      <vaadin-label style-name="bolderBigger" width="120px" plain-text="" _id="awayTeamLabel" :middle="" :center="">
+        Away Team 
+      </vaadin-label> 
+     </vaadin-horizontal-layout> 
+    </vaadin-horizontal-layout> 
+   </vaadin-vertical-layout> 
+   <vaadin-horizontal-layout width-full="true" _id="gametickerLayout"> 
+    <vaadin-horizontal-layout width="40%" _id="firstHalfLayout" :middle="" :right=""> 
+     <vaadin-progress-bar width-full="true" _id="firstHalfProgress" :expand=""></vaadin-progress-bar> 
+    </vaadin-horizontal-layout> 
+    <vaadin-horizontal-layout width="20%" :middle="" :center=""> 
+     <vaadin-label style-name="bolderBigger" plain-text="" :expand="">
+       Half time 
+     </vaadin-label> 
+    </vaadin-horizontal-layout> 
+    <vaadin-horizontal-layout width="40%" _id="secondHalfLayout" :middle=""> 
+     <vaadin-progress-bar _id="secondHalfProgress"></vaadin-progress-bar> 
+    </vaadin-horizontal-layout> 
+   </vaadin-horizontal-layout> 
+  </vaadin-vertical-layout>  
+ </body>
+</html>
