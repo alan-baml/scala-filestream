@@ -8,7 +8,7 @@ object Main {
 
   def main(args: Array[String]) {
 
-     val buffered = Source.fromFile(new File(args(0)))
+    val buffered = Source.fromFile(new File(args(0)))
     try {
       val linesAsMap = buffered.getLines.map(generateEvent(_))
       val linesAsGenericEvents = linesAsMap map { kvPair =>
