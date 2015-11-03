@@ -96,7 +96,8 @@ class RugbyWorldCupUI extends UI with DefaultActorSystem with UpdateUI {
     val p = r.getItemProperty("Minute").asInstanceOf[Property[Integer]]
     p.setValue(minute)
     val p2 = r.getItemProperty("Event").asInstanceOf[Property[String]]
-    p2.setValue(text);
+    p2.setValue(text)
+    eventTable.setCurrentPageFirstItemIndex(eventTable.size())
   }
 
   @Override
@@ -147,7 +148,10 @@ class RugbyWorldCupUI extends UI with DefaultActorSystem with UpdateUI {
     import matchHeaderLayout._
     if (minute > 40) {
       secondHalfProgress.setValue(scale(minute - 40))
-    } else firstHalfProgress.setValue(scale(minute - 40))
+    } else {
+       firstHalfProgress.setValue(scale(minute))
+       if (minute == 80) Notification.show("Game Over!!")
+    }
 
   }
 
